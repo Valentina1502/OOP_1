@@ -22,14 +22,10 @@ class Korny:
         print(f"   Корень  =  {x:.2f}")
 
     def read(self):
-        self.first = input("Введите коэффициент А ")
-        if float(self.first) != 0:
-            self.second = input("Введите коэффициент В ")
-            if float(self.second) != 0:
-                self.third = float(input("Введите значение Y "))
-                y.root()
-            else:
-                print("Коэффициент не может быть равен 0")
+        self.first, self.second, self.third = \
+            input("Введите коэффициенты А B и Y ").split()
+        if float(self.first) != 0 and float(self.second) != 0:
+            y.root()
         else:
             print("Коэффициент не может быть равен 0")
 
@@ -37,3 +33,4 @@ class Korny:
 if __name__ == '__main__':
     y = Korny()
     y.read()
+
